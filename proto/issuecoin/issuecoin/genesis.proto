@@ -1,0 +1,12 @@
+syntax = "proto3";
+package issuecoin.issuecoin;
+
+import "gogoproto/gogo.proto";
+import "issuecoin/issuecoin/params.proto";
+
+option go_package = "issuecoin/x/issuecoin/types";
+
+// GenesisState defines the issuecoin module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
